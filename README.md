@@ -35,7 +35,7 @@
         <tr>
             <td align="center" >
                 <div class="face-one-feature-item">
-                    <img src="./doc/theme/media/cogwheel.svg" alt="" class="face-one-feature-item-photo">
+                    <img src="./doc/theme/media/cogwheel.svg" alt="" class="face-one-feature-item-photo" />
                     <br />
                         <div class="face-one-feature-item-label">语法简介</div>
                         <div class="face-one-feature-item-desc">在 <a href="https://www.npmjs.com/package/prop-types">prop-types</a> 基础上 可配置默认 <code>isRequired</code> 。</div>
@@ -43,21 +43,20 @@
             </td>
             <td align="center" >
                 <div class="face-one-feature-item">
-                    <img src="./doc/theme/media/update.svg" alt="" class="face-one-feature-item-photo">
+                    <img src="./doc/theme/media/update.svg" alt="" class="face-one-feature-item-photo" />
                     <br />
                     <div class="face-one-feature-item-label">完全兼容 <code>prop-types</code> API</div>
                     <div class="face-one-feature-item-desc">只增加了<code>isRequired</code>配置</div>
                 </div>
             </td>
             <td align="center" >
-
                 <div class="face-one-feature-item">
-                    <img src="./doc/theme/media/share.svg" alt="" class="face-one-feature-item-photo">
+                    <img src="./doc/theme/media/share.svg" alt="" class="face-one-feature-item-photo" />
                     <br />
-                        <div class="face-one-feature-item-label">配套接口封装库</div>
-                        <div class="face-one-feature-item-desc">
-                            在 <a href="https://onface.github.io/better-api/">better-api</a> 中使用 `face-types` 能让前后端协作更顺利
-                        </div>
+                    <div class="face-one-feature-item-label">配套接口封装库</div>
+                    <div class="face-one-feature-item-desc">
+                        在 <a href="https://onface.github.io/better-api/">better-api</a> 中使用 <code>face-types</code> 能让前后端协作更顺利
+                    </div>
                 </div>
             </td>
         </tr>
