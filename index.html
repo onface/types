@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<link rel="stylesheet" href="doc/theme/face/face.css">
+<meta name="keywords" content="">
+<meta name="description" content="prop-types 增强">
+<title>face-types</title>
+<style>h1, .mr-online-hide{display:none;}</style>
+<!--[if lt IE 10]><script src="doc/theme/polyfill/lt-ie10.js"></script><![endif]-->
+<script src="doc/theme/polyfill/es6-promise.js"></script>
+</head>
+<body>
+<div class="face-one-head">
+    <a class="face-one-head-logo" href="index.html">
+        <img src="doc/theme/media/logo.svg" alt="" class="face-one-head-logo-photo" />
+        <span class="face-one-head-logo-text">
+        face-types
+        </span>
+    </a>
+    <span class="face-one-head-slogan">
+        prop-types 增强
+    </span>
+    <!-- <div class="face-one-head-search">
+        <span class="face-one-head-search-icon fi fi-search"></span>
+        <input type="text" class="face-one-head-search-input" placeholder="搜索..." />
+    </div> -->
+    <div class="face-one-head-nav">
+        <span class="face-one-head-nav-switch fi fi-bars"></span>
+        <div class="face-one-head-nav-F-cnt">
+            <a href="index.html" class="face-one-head-nav-link">首页</a>
+            <a href="doc/intro.html" class="face-one-head-nav-link">指引</a>
+            <a href="doc/index.html" class="face-one-head-nav-link">文档</a>
+        </div>
+        <script>
+        Array.from(document.querySelectorAll('.face-one-head-nav-link')).forEach(function (node) {
+            if (node.href) {
+                var pathname = node.href.replace(/\?.*/, '')
+                if (pathname === location.origin + location.pathname) {
+                    node.setAttribute('class', node.getAttribute('class') + ' ' + 'face-one-head-nav-link--on')
+                }
+            }
+        })
+        </script>
+    </div>
+</div>
+
+<h1 id="face-types" ><a class="markrun-anchor" href="Users/nimo/Documents/git/types/#face-types"><span class="markrun-anchor-link"></span></a>face-types</h1><!--MR-D{tpl: 'home'}-->
+<style>h1 {display:none;}</style>
+<div class="face-one-intro">
+    <div class="face-one-intro-title">face-types</div>
+    <h2 class="face-one-intro-desc">
+        prop-types 增强
+    </h2>
+    <div class="face-one-readmedemo">
+            <div class="face-one-readmedemo-node" style="min-height:auto;" >
+                <div id="simple-demo" class="face-one-readmedemo-node-render" style="padding:0 1em;" >
+                <pre><code class="lang-js"><span class="hljs-keyword">var</span> Types = <span class="hljs-built_in">require</span>(<span class="hljs-string">'face-types'</span>)({<span class="hljs-attr">isRequired</span>: <span class="hljs-literal">true</span>})
+</code></pre>
+                </div>
+            </div>
+        </div>
+    <div class="face-one-intro-tool">
+        <a href="https://onface.github.io/types" class="face-one-intro-btn face-one-intro-btn--primary mr-online-hide" >在线文档</a>
+        <a href="./doc/intro.html" class="face-one-intro-btn face-one-intro-btn--primary">指引</a>
+            <a href="http://github.com/onface/types" class="face-one-intro-btn">GITHUB</a>
+    </div>
+</div>
+<div class="face-one-feature">
+    <table style="width:100%;" data-comments="In order to github typesetting so use the table tag" >
+        <tr>
+            <td align="center" >
+                <div class="face-one-feature-item">
+                    <img src="doc/theme/media/cogwheel.svg" alt="" class="face-one-feature-item-photo" />
+                    <br />
+                    <div class="face-one-feature-item-label">语法简介</div>
+                    <div class="face-one-feature-item-desc">在 <a href="https://www.npmjs.com/package/prop-types">prop-types</a> 基础上 可配置默认 <code>isRequired</code> 。</div>
+                </div>
+            </td>
+            <td align="center" >
+                <div class="face-one-feature-item">
+                    <img src="doc/theme/media/update.svg" alt="" class="face-one-feature-item-photo" />
+                    <br />
+                    <div class="face-one-feature-item-label"> compatible <code>prop-types</code> API</div>
+                    <div class="face-one-feature-item-desc">Only increase the<code>isRequired</code></div>
+                </div>
+            </td>
+            <td align="center" >
+                <div class="face-one-feature-item">
+                    <img src="doc/theme/media/share.svg" alt="" class="face-one-feature-item-photo" />
+                    <br />
+                    <div class="face-one-feature-item-label">Supporting interface package library</div>
+                    <div class="face-one-feature-item-desc">
+                        在 <a href="https://onface.github.io/better-api/">better-api</a>  <code>face-types</code> It makes front-end collaboration easier
+                    </div>
+                </div>
+            </td>
+        </tr>
+    </table>
+</div>
+
+
+<div style="text-align:center;" >
+    <a href="https://travis-ci.org/onface/types" style="text-decoration: none;" >
+        <img alt="Build Status" src="https://api.travis-ci.org/onface/types.svg?branch=master" />
+    </a>
+    <a href="https://npmjs.org/package/face-types"  style="text-decoration: none;" >
+        <img alt="NPM version" src="https://img.shields.io/npm/v/face-types.svg?style=flat" />
+    </a>
+    <a href="https://npmjs.org/package/face-types"  style="text-decoration: none;" >
+        <img alt="NPM downloads" src="https://img.shields.io/npm/dm/face-types.svg?style=flat" />
+    </a>
+</div>
+
+
+<p><a href="https://saucelabs.com/u/onface-types" >
+    <img alt="Saucelabs Tests" style="display:block;margin-left:auto;margin-right:auto;" src="https://saucelabs.com/browser-matrix/onface-types.svg" >
+</a></p>
+<p><h3 class="face-one-feature-title">
+    Creator
+</h3></p>
+<div class="face-one-feature face-one-feature--creator">
+    <table style="width:100%;" data-comments="In order to github typesetting so use the table tag" >
+        <tr>
+            <td align="center" >
+                <a class="face-one-feature-item" href="https://github.com/nimojs">
+                    <img src="https://github.com/nimojs.png" width="150 height="150" alt="" class="face-one-feature-item-avatar">
+                    <br />
+                    <div class="face-one-feature-item-label">NimoChu</div>
+                </a>
+            </td>
+        </tr>
+    </table>
+</div><script>
+Array.from(document.querySelectorAll('.face-one-nav-item-label')).forEach(function (node) {
+    if (node.href) {
+        var pathname = node.href.replace(/\?.*/, '')
+        if (pathname === location.origin + location.pathname + location.hash) {
+            node.setAttribute('class', node.getAttribute('class') + ' ' + 'face-one-nav-item-label--on')
+        }
+    }
+})
+var faceOneGetParent = function faceOneGetParent (el, className) {
+   if (el.parentNode.nodeName.toLowerCase() === 'html') {
+       return null
+   }
+   var parentClassName = el.parentNode.getAttribute('class')
+   var classNames = ''
+   if (parentClassName) {
+       classNames = parentClassName.split(' ')
+   }
+   if (classNames.indexOf(className) !== -1) {
+       return el.parentNode
+   }
+   else {
+       return faceOneGetParent(el.parentNode, className)
+   }
+}
+Array.from(document.querySelectorAll('.face-one-nav-item-group-item')).forEach(function (node) {
+    addAvativeClass(node)
+    function addAvativeClass (node)  {
+        if (node.href) {
+            var pathname = node.href.replace(/\?.*/, '')
+            if (pathname === location.origin + location.pathname + location.hash) {
+                node.setAttribute('class', node.getAttribute('class') + ' ' + 'face-one-nav-item-group-item--on')
+                var parentNode = faceOneGetParent(node, 'face-one-nav-item--group')
+                if (parentNode) {
+                    parentNode.setAttribute('class', parentNode.getAttribute('class') + ' ' + 'face-one-nav-item--group-on')
+                }
+            }
+        }
+    }
+
+})
+</script>
+<div class="face-one-foot">
+    <div class="face-one-foot-F-inner">
+        <div class="face-one-foot-group">
+            <div class="face-one-foot-group-title">
+                <span class="face-one-foot-group-title-icon fi fi-github"></span>
+                Github
+            </div>
+            <div class="face-one-foot-group-item">
+                <a href="https://github.com/onface/types" class="face-one-foot-group-item-link">types</a>
+                - 项目源码
+            </div>
+        </div>
+        <div class="face-one-foot-group">
+            <div class="face-one-foot-group-title">
+                <span class="face-one-foot-group-title-icon fi fi-link"></span>
+                相关站点
+            </div>
+            <div class="face-one-foot-group-item">
+                <a href="https://onface.github.io/component-spec">component-spec</a>
+                - 组件规范
+            </div>
+            <div class="face-one-foot-group-item">
+                <a href="https://github.com/onface/module" class="face-one-foot-group-item-link">module</a>
+                - 开源项目脚手架
+            </div>
+            <div class="face-one-foot-group-item">
+                <a href="https://onface.live/" class="face-one-foot-group-item-link">onface.live</a>
+                - 资源集合
+            </div>
+        </div>
+        <div class="face-one-foot-group">
+            <div class="face-one-foot-group-title">
+                <span class="face-one-foot-group-title-icon fi fi-team"></span>
+                社区
+            </div>
+            <div class="face-one-foot-group-item">
+                <a href="https://github.com/onface/types/issues" class="face-one-foot-group-item-link">Github issues</a>
+            </div>
+            <div class="face-one-foot-group-item">
+                <a href="https://github.com/onface/types/issues/new" class="face-one-foot-group-item-link">提交bug</a>
+            </div>
+            <div class="face-one-foot-group-item" id="face-one-view-version">
+
+            </div>
+
+        </div>
+        <div class="face-one-foot-copyright">
+            <a href="index.html" class="face-one-foot-copyright-title">
+                <img src="doc/theme/media/logo.svg" class="face-one-foot-copyright-title-logo" />
+            </a>
+        </div>
+    </div>
+</div>
+<script>
+PACKAGE_JSON = {
+    name: "face-types",
+    $repository: "types",
+    version: "0.1.0",
+}
+</script>
+<script>
+    if (location.pathname === '/' + PACKAGE_JSON.$repository) {
+        var url = [
+            location.origin,
+            '/' + PACKAGE_JSON.$repository + '/',
+            location.search,
+            location.hash
+        ].join('')
+        location.href = url
+    }
+</script>
+
+<script src="doc/theme/jquery.js"></script>
+<script>delete window.$</script>
+<script src="doc/theme/face/face.js" ></script>
+</body>
+</html>

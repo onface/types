@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<link rel="stylesheet" href="theme/face/face.css">
+<meta name="keywords" content="">
+<meta name="description" content="指引">
+<title>指引</title>
+<!--[if lt IE 10]><script src="theme/polyfill/lt-ie10.js"></script><![endif]-->
+<script src="theme/polyfill/es6-promise.js"></script>
+</head>
+<body>
+<div class="face-one-head">
+    <a class="face-one-head-logo" href="../index.html">
+        <img src="theme/media/logo.svg" alt="" class="face-one-head-logo-photo" />
+        <span class="face-one-head-logo-text">
+        face-types
+        </span>
+    </a>
+    <span class="face-one-head-slogan">
+        prop-types 增强
+    </span>
+    <!-- <div class="face-one-head-search">
+        <span class="face-one-head-search-icon fi fi-search"></span>
+        <input type="text" class="face-one-head-search-input" placeholder="搜索..." />
+    </div> -->
+    <div class="face-one-head-nav">
+        <span class="face-one-head-nav-switch fi fi-bars"></span>
+        <div class="face-one-head-nav-F-cnt">
+            <a href="../index.html" class="face-one-head-nav-link">首页</a>
+            <a href="intro.html" class="face-one-head-nav-link">指引</a>
+            <a href="index.html" class="face-one-head-nav-link">文档</a>
+        </div>
+        <script>
+        Array.from(document.querySelectorAll('.face-one-head-nav-link')).forEach(function (node) {
+            if (node.href) {
+                var pathname = node.href.replace(/\?.*/, '')
+                if (pathname === location.origin + location.pathname) {
+                    node.setAttribute('class', node.getAttribute('class') + ' ' + 'face-one-head-nav-link--on')
+                }
+            }
+        })
+        </script>
+    </div>
+</div>
+
+<div class="face-one-layout">
+<div class="face-one-layout-F-line">
+<div class="face-one-layout-sidebar">
+<div class="face-one-nav">
+<span class="face-one-nav-switch fi fi-menu-unfold"></span>
+<div class="face-one-nav-F-inner">
+<div class="face-one-nav-item">
+    <a href="intro.html" class="face-one-nav-item-label">指引</a>
+</div>
+<div class="face-one-nav-item">
+    <a href="index.html" class="face-one-nav-item-label">文档</a>
+</div>
+<!-- face-one-nav-item--group-on 控制默认展开 -->
+<!-- <div class="face-one-nav-item face-one-nav-item--group face-one-nav-item--group-on">
+    <span class="face-one-nav-item-switch fi fi-down"></span>
+    <span class="face-one-nav-item-label">
+        文档
+    </span>
+    <div class="face-one-nav-item-group">
+        <div class="face-one-nav-item-group-title">示例</div>
+        <a href="index.html#style" class="face-one-nav-item-group-item">颜色</a>
+        <a href="index.html#border" class="face-one-nav-item-group-item">边框</a>
+    </div>
+    <div class="face-one-nav-item-group">
+        <div class="face-one-nav-item-group-title">自定义界面</div>
+        <a href="index.html#less" class="face-one-nav-item-group-item">less</a>
+    </div>
+</div> -->
+
+</div>
+</div>
+</div>
+<div class="face-one-layout-cnt">
+<div id="face-one-cnt" class="face-one-cnt markdown-body">
+<div id="face-one-sidebar" class="face-one-sidebar"></div>
+<h1 id="指引" ><a class="markrun-anchor" href="../Users/nimo/Documents/git/types/#指引"><span class="markrun-anchor-link"></span></a>指引</h1><blockquote>
+<p>使用一个组件或模块之前，应当知道它能解决的问题是什么，不能解决的问题是什么。使用的最佳实践是什么？</p>
+</blockquote>
+<p><a href="https://www.npmjs.com/package/prop-types">prop-types</a> 是 React 团队提供的类型检测库。</p>
+<p><code>prop-types</code> 不止可以在 React 中使用还可以单独调用。</p>
+<pre><code class="lang-js"><span class="hljs-keyword">const</span> myPropTypes = {
+  name: PropTypes.<span class="hljs-keyword">string</span>,
+  age: PropTypes.number,
+};
+
+<span class="hljs-keyword">const</span> props = {
+  name: <span class="hljs-string">'hello'</span>, <span class="hljs-comment">// is valid</span>
+  age: <span class="hljs-string">'world'</span>, <span class="hljs-comment">// not valid</span>
+};
+
+PropTypes.checkPropTypes(myPropTypes, props, <span class="hljs-string">'prop'</span>, <span class="hljs-string">'MyComponent'</span>);
+</code></pre>
+<p>但是在校验服务器数据时要将大部分参数都加上 <code>isRequired</code></p>
+<pre><code class="lang-js"><span class="hljs-selector-tag">var</span> PropTypes = require(<span class="hljs-string">'props-types'</span>)
+<span class="hljs-selector-tag">var</span> { string, number} = PropTypes
+PropTypes.checkPropTypes(
+    {
+        name: string<span class="hljs-selector-class">.isRequired</span>,
+        age: number<span class="hljs-selector-class">.isRequired</span>
+    }
+)
+</code></pre>
+<p>当属性变多时候会在代码中充斥着 <code>isRequired</code>，并且在编写时候会浪费很多时间。</p>
+<p><code>face-types</code> 基于 <code>PropTypes</code> 进行二次封装。可以配置默认 <code>isRequired</code> 为 <code>true</code> 或 <code>false</code></p>
+<pre><code class="lang-js"><span class="hljs-keyword">var</span> PropTypes = <span class="hljs-built_in">require</span>(<span class="hljs-string">'face-types'</span>)({isRequired: <span class="hljs-literal">true</span>})
+<span class="hljs-keyword">var</span> notRequiredTypes = <span class="hljs-built_in">require</span>(<span class="hljs-string">'face-types'</span>)({isRequired: <span class="hljs-literal">false</span>})
+<span class="hljs-keyword">var</span> { <span class="hljs-built_in">string</span>, <span class="hljs-built_in">number</span>} = PropTypes
+PropTypes.checkPropTypes(
+    {
+        name: <span class="hljs-built_in">string</span>,
+        age: <span class="hljs-built_in">number</span>,
+        weight: notRequiredTypes.number
+    }
+)
+</code></pre>
+<p><strong>注意</strong> 如果是在 React 中还是建议直接使用 <code>PropTypes</code> 以免不了解 <code>face-types</code> 的开发人员误解 <code>App.propTypes</code>。而且 <code>React</code> 的参数并不会像服务器数据这样多，后缀加上 <code>isRequired</code> 并不麻烦。</p>
+<p><strong><a href="./index.html">查看更多用法</a></strong></p></div>
+</div>
+</div>
+</div>
+<script>
+Array.from(document.querySelectorAll('.face-one-nav-item-label')).forEach(function (node) {
+    if (node.href) {
+        var pathname = node.href.replace(/\?.*/, '')
+        if (pathname === location.origin + location.pathname + location.hash) {
+            node.setAttribute('class', node.getAttribute('class') + ' ' + 'face-one-nav-item-label--on')
+        }
+    }
+})
+var faceOneGetParent = function faceOneGetParent (el, className) {
+   if (el.parentNode.nodeName.toLowerCase() === 'html') {
+       return null
+   }
+   var parentClassName = el.parentNode.getAttribute('class')
+   var classNames = ''
+   if (parentClassName) {
+       classNames = parentClassName.split(' ')
+   }
+   if (classNames.indexOf(className) !== -1) {
+       return el.parentNode
+   }
+   else {
+       return faceOneGetParent(el.parentNode, className)
+   }
+}
+Array.from(document.querySelectorAll('.face-one-nav-item-group-item')).forEach(function (node) {
+    addAvativeClass(node)
+    function addAvativeClass (node)  {
+        if (node.href) {
+            var pathname = node.href.replace(/\?.*/, '')
+            if (pathname === location.origin + location.pathname + location.hash) {
+                node.setAttribute('class', node.getAttribute('class') + ' ' + 'face-one-nav-item-group-item--on')
+                var parentNode = faceOneGetParent(node, 'face-one-nav-item--group')
+                if (parentNode) {
+                    parentNode.setAttribute('class', parentNode.getAttribute('class') + ' ' + 'face-one-nav-item--group-on')
+                }
+            }
+        }
+    }
+
+})
+</script>
+<div class="face-one-foot">
+    <div class="face-one-foot-F-inner">
+        <div class="face-one-foot-group">
+            <div class="face-one-foot-group-title">
+                <span class="face-one-foot-group-title-icon fi fi-github"></span>
+                Github
+            </div>
+            <div class="face-one-foot-group-item">
+                <a href="https://github.com/onface/types" class="face-one-foot-group-item-link">types</a>
+                - 项目源码
+            </div>
+        </div>
+        <div class="face-one-foot-group">
+            <div class="face-one-foot-group-title">
+                <span class="face-one-foot-group-title-icon fi fi-link"></span>
+                相关站点
+            </div>
+            <div class="face-one-foot-group-item">
+                <a href="https://onface.github.io/component-spec">component-spec</a>
+                - 组件规范
+            </div>
+            <div class="face-one-foot-group-item">
+                <a href="https://github.com/onface/module" class="face-one-foot-group-item-link">module</a>
+                - 开源项目脚手架
+            </div>
+            <div class="face-one-foot-group-item">
+                <a href="https://onface.live/" class="face-one-foot-group-item-link">onface.live</a>
+                - 资源集合
+            </div>
+        </div>
+        <div class="face-one-foot-group">
+            <div class="face-one-foot-group-title">
+                <span class="face-one-foot-group-title-icon fi fi-team"></span>
+                社区
+            </div>
+            <div class="face-one-foot-group-item">
+                <a href="https://github.com/onface/types/issues" class="face-one-foot-group-item-link">Github issues</a>
+            </div>
+            <div class="face-one-foot-group-item">
+                <a href="https://github.com/onface/types/issues/new" class="face-one-foot-group-item-link">提交bug</a>
+            </div>
+            <div class="face-one-foot-group-item" id="face-one-view-version">
+
+            </div>
+
+        </div>
+        <div class="face-one-foot-copyright">
+            <a href="../index.html" class="face-one-foot-copyright-title">
+                <img src="theme/media/logo.svg" class="face-one-foot-copyright-title-logo" />
+            </a>
+        </div>
+    </div>
+</div>
+<script>
+PACKAGE_JSON = {
+    name: "face-types",
+    $repository: "types",
+    version: "0.1.0",
+}
+</script>
+<script>
+    if (location.pathname === '/' + PACKAGE_JSON.$repository) {
+        var url = [
+            location.origin,
+            '/' + PACKAGE_JSON.$repository + '/',
+            location.search,
+            location.hash
+        ].join('')
+        location.href = url
+    }
+</script>
+
+<script src="theme/jquery.js"></script>
+<script>delete window.$</script>
+<script src="theme/face/face.js" ></script>
+</body>
+</html>
