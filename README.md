@@ -22,8 +22,8 @@
             </div>
         </div>
     -->
-    <div class="face-one-intro-tool">
-        <a href="https://onface.github.io/types" class="face-one-intro-btn face-one-intro-btn--primary mr-online-hide" >在线文档</a>
+<!--     <div class="face-one-intro-tool">
+        <a href="https://onface.github.io/types" class="face-one-intro-btn face-one-intro-btn--primary mr-online-hide" >在线文档</a> -->
         <!-- MARKRUN-HTML
             <a href="./doc/intro.md" class="face-one-intro-btn face-one-intro-btn--primary">指引</a>
             <a href="http://github.com/onface/types" class="face-one-intro-btn">GITHUB</a>
@@ -55,7 +55,7 @@
                     <br />
                     <div class="face-one-feature-item-label">Supporting interface package library</div>
                     <div class="face-one-feature-item-desc">
-                        在 <a href="https://onface.github.io/better-api/">better-api</a>  <code>face-types</code> It makes front-end collaboration easier
+                         <a href="https://onface.github.io/better-api/">better-api</a>  <code>face-types</code> It makes front-end collaboration easier
                     </div>
                 </div>
             </td>
