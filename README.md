@@ -12,6 +12,17 @@
     <h2 class="face-one-intro-desc">
         prop-types enhance
     </h2>
+    <pre>
+var Types = require('face-types')({isRequired: true})
+Types.check(
+  {
+    name: Types.string
+  },
+  {
+    name: 123
+  }
+)    
+    </pre>
     <!-- MARKRUN-HTML
         <div class="face-one-readmedemo">
             <div class="face-one-readmedemo-node" style="min-height:auto;" >
