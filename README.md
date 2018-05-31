@@ -37,7 +37,7 @@
                 <div class="face-one-feature-item">
                     <img src="./doc/theme/media/cogwheel.svg" alt="" class="face-one-feature-item-photo" />
                     <br />
-                        <div class="face-one-feature-item-label">语法简介</div>
+                        <div class="face-one-feature-item-label">语法简洁</div>
                         <div class="face-one-feature-item-desc">在 <a href="https://www.npmjs.com/package/prop-types">prop-types</a> 基础上 可配置默认 <code>isRequired</code> 。</div>
                 </div>
             </td>
