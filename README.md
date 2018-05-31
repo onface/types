@@ -10,7 +10,7 @@
 <div class="face-one-intro">
     <div class="face-one-intro-title">face-types</div>
     <h2 class="face-one-intro-desc">
-        prop-types 增强
+        prop-types enhance
     </h2>
     <!-- MARKRUN-HTML
         <div class="face-one-readmedemo">
@@ -37,25 +37,25 @@
                 <div class="face-one-feature-item">
                     <img src="./doc/theme/media/cogwheel.svg" alt="" class="face-one-feature-item-photo" />
                     <br />
-                        <div class="face-one-feature-item-label">语法简洁</div>
-                        <div class="face-one-feature-item-desc">在 <a href="https://www.npmjs.com/package/prop-types">prop-types</a> 基础上 可配置默认 <code>isRequired</code> 。</div>
+                        <div class="face-one-feature-item-label">Grammar is simple</div>
+                        <div class="face-one-feature-item-desc"><a href="https://www.npmjs.com/package/prop-types">prop-types</a> Default can be configured on a foundation basis <code>isRequired</code> 。</div>
                 </div>
             </td>
             <td align="center" >
                 <div class="face-one-feature-item">
                     <img src="./doc/theme/media/update.svg" alt="" class="face-one-feature-item-photo" />
                     <br />
-                    <div class="face-one-feature-item-label">完全兼容 <code>prop-types</code> API</div>
-                    <div class="face-one-feature-item-desc">只增加了<code>isRequired</code>配置</div>
+                    <div class="face-one-feature-item-label"> compatible <code>prop-types</code> API</div>
+                    <div class="face-one-feature-item-desc">Only increase the<code>isRequired</code></div>
                 </div>
             </td>
             <td align="center" >
                 <div class="face-one-feature-item">
                     <img src="./doc/theme/media/share.svg" alt="" class="face-one-feature-item-photo" />
                     <br />
-                    <div class="face-one-feature-item-label">配套接口封装库</div>
+                    <div class="face-one-feature-item-label">Supporting interface package library</div>
                     <div class="face-one-feature-item-desc">
-                        在 <a href="https://onface.github.io/better-api/">better-api</a> 中使用 <code>face-types</code> 能让前后端协作更顺利
+                        在 <a href="https://onface.github.io/better-api/">better-api</a>  <code>face-types</code> It makes front-end collaboration easier
                     </div>
                 </div>
             </td>
