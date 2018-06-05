@@ -10,7 +10,7 @@
 <div class="face-one-intro">
     <div class="face-one-intro-title">face-types</div>
     <h2 class="face-one-intro-desc">
-        prop-types enhance
+        prop-types 增强
     </h2>
     <!-- MARKRUN-HTML
         <div class="face-one-readmedemo">
@@ -37,8 +37,8 @@
                 <div class="face-one-feature-item">
                     <img src="./doc/theme/media/cogwheel.svg" alt="" class="face-one-feature-item-photo" />
                     <br />
-                        <div class="face-one-feature-item-label">Grammar is simple</div>
-                        <div class="face-one-feature-item-desc"><a href="https://www.npmjs.com/package/prop-types">prop-types</a> Default can be configured on a foundation basis <code>isRequired</code> 。</div>
+                    <div class="face-one-feature-item-label">语法简介</div>
+                    <div class="face-one-feature-item-desc">在 <a href="https://www.npmjs.com/package/prop-types">prop-types</a> 基础上 可配置默认 <code>isRequired</code> 。</div>
                 </div>
             </td>
             <td align="center" >
