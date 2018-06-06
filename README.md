@@ -6,29 +6,30 @@
 <style>h1 {display:none;}</style>
 -->
 
+<!-- MARKRUN-HTML
+<div hidden >
+-->
+
+```js
+var Types = require('face-types')({isRequired: true})
+Types.check( { name: Types.string }, { name: 'nimo' } )
+```
+
+<!-- MARKRUN-HTML
+</div>
+-->
 
 <div class="face-one-intro">
     <div class="face-one-intro-title">face-types</div>
     <h2 class="face-one-intro-desc">
         prop-types 增强
     </h2>
-    <pre>
-var Types = require('face-types')({isRequired: true})
-Types.check(
-  {
-    name: Types.string
-  },
-  {
-    name: 123
-  }
-)    
-    </pre>
     <!-- MARKRUN-HTML
         <div class="face-one-readmedemo">
             <div class="face-one-readmedemo-node" style="min-height:auto;" >
                 <div id="simple-demo" class="face-one-readmedemo-node-render" style="padding:0 1em;" >
-                <pre><code class="lang-js"><span class="hljs-keyword">var</span> Types = <span class="hljs-built_in">require</span>(<span class="hljs-string">'face-types'</span>)({<span class="hljs-attr">isRequired</span>: <span class="hljs-literal">true</span>})
-</code></pre>
+                <pre><code class="lang-js"><span class="hljs-keyword">var</span> Types = <span class="hljs-built_in">require</span>(<span class="hljs-string">'face-types'</span>)({isRequired: <span class="hljs-literal">true</span>})
+Types.check( { name: Types.string }, { name: <span class="hljs-string">'nimo'</span> } )</code></pre>
                 </div>
             </div>
         </div>
@@ -56,17 +57,17 @@ Types.check(
                 <div class="face-one-feature-item">
                     <img src="./doc/theme/media/update.svg" alt="" class="face-one-feature-item-photo" />
                     <br />
-                    <div class="face-one-feature-item-label"> compatible <code>prop-types</code> API</div>
-                    <div class="face-one-feature-item-desc">Only increase the<code>isRequired</code></div>
+                    <div class="face-one-feature-item-label"> 兼容 <code>prop-types</code> API</div>
+                    <div class="face-one-feature-item-desc">只会增加配置项<code>isRequired</code></div>
                 </div>
             </td>
             <td align="center" >
                 <div class="face-one-feature-item">
                     <img src="./doc/theme/media/share.svg" alt="" class="face-one-feature-item-photo" />
                     <br />
-                    <div class="face-one-feature-item-label">Supporting interface package library</div>
+                    <div class="face-one-feature-item-label">配套接口封装库</div>
                     <div class="face-one-feature-item-desc">
-                         <a href="https://onface.github.io/better-api/">better-api</a>  <code>face-types</code> It makes front-end collaboration easier
+                         在<a href="https://onface.github.io/better-api/">better-api</a> 中使用<code>face-types</code> 能让前后端协作更顺利
                     </div>
                 </div>
             </td>
@@ -94,7 +95,7 @@ Types.check(
 
 
 <h3 class="face-one-feature-title">
-    Creator
+    维护者
 </h3>
 <div class="face-one-feature face-one-feature--creator">
     <table style="width:100%;" data-comments="In order to github typesetting so use the table tag" >

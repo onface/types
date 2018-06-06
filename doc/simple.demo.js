@@ -10,7 +10,11 @@ var {
     oneOf, oneOfType, shape
 } = Types
 
-var notRrequiredTypes = require('face-types')({isRequired: false})
+var LooseTypes = require('face-types')({
+    isRequired: false,
+    location: 'JSON',
+    mdouleName: 'Response'
+})
 
 document.getElementById('simple-demo').addEventListener('click', function () {
         // or Types.checkPropTypes
@@ -23,7 +27,9 @@ document.getElementById('simple-demo').addEventListener('click', function () {
         {
             name: 'nimo', // pass
             age: '26', // fail
-            weight: notRrequiredTypes.age
-        }
+            weight: LooseTypes.age
+        },
+        // "JSON",
+        // "Response"
     )
 })

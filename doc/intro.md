@@ -39,14 +39,14 @@ PropTypes.checkPropTypes(
 `face-types` 基于 `PropTypes` 进行二次封装。可以配置默认 `isRequired` 为 `true` 或 `false`
 
 ```js
-var PropTypes = require('face-types')({isRequired: true})
-var notRequiredTypes = require('face-types')({isRequired: false})
-var { string, number} = PropTypes
-PropTypes.checkPropTypes(
+var Types = require('face-types')({isRequired: true})
+var LooseTypes = require('face-types')({isRequired: false})
+var { string, number} = Types
+Types.check(
     {
         name: string,
         age: number,
-        weight: notRequiredTypes.number
+        weight: LooseTypes.number
     }
 )
 ```
